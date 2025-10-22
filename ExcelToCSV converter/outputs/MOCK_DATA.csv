@@ -1,0 +1,101 @@
+﻿customer_id,first_name,last_name,email,phone_number,address,city,country,postal_code,membership_status
+1,Adrea,Bahls,abahls0@nytimes.com,659-543-8670,13755 Straubel Way,Bagacay,Philippines,6216,active
+2,Skipper,Hussy,shussy1@kickstarter.com,880-226-6272,13279 Anniversary Avenue,Uritsk,Russia,663594,active
+3,Marion,Trowle,mtrowle2@china.com.cn,202-477-4728,48225 Dawn Point,Awat,China,,inactive
+4,Ingrim,Ledekker,iledekker3@livejournal.com,801-645-0588,3 Miller Center,Nalinggou,China,,active
+5,Karol,Newsome,knewsome4@topsy.com,476-194-4047,6489 Dottie Junction,Heihe,China,,active
+6,Angil,Bourdel,abourdel5@ucoz.com,290-931-2044,05 Village Plaza,Krajan,Indonesia,,pending
+7,Baron,Robillard,brobillard6@state.gov,945-577-5658,50 North Pass,Taiobeiras,Brazil,39550-000,active
+8,Courtnay,Mariaud,cmariaud7@last.fm,973-382-2954,832 Talisman Crossing,Zel’va,Belarus,,pending
+9,Sabra,Bamfield,sbamfield8@woothemes.com,281-581-6781,7211 Hooker Road,Marseille,France,13382 CEDEX 13,active
+10,Cairistiona,Cockhill,ccockhill9@miibeian.gov.cn,127-176-5626,22597 Comanche Point,Pangkalan,Indonesia,,active
+11,Lark,Sydes,lsydesa@cornell.edu,669-498-5997,96556 Delladonna Center,Lusambo,Democratic Republic of the Congo,,pending
+12,Huntley,Devorill,hdevorillb@slideshare.net,102-685-1518,43 Bellgrove Lane,Tangerang,Indonesia,,inactive
+13,Mame,Fellgatt,mfellgattc@devhub.com,602-479-4114,155 Sauthoff Avenue,Baixo Guandu,Brazil,29730-000,pending
+14,Elijah,MacChaell,emacchaelld@skype.com,950-579-5245,36025 Colorado Terrace,Cential,Portugal,3070-085,inactive
+15,Haley,Woodhead,hwoodheade@free.fr,600-236-1423,52 Meadow Vale Center,Pillpinto,Peru,,inactive
+16,Tailor,Pedlingham,tpedlinghamf@oakley.com,465-203-2452,0 Merry Parkway,Uzyn,Ukraine,,pending
+17,Hoyt,Garley,hgarleyg@yahoo.co.jp,728-362-5563,958 Nevada Parkway,Sosándra,Greece,,active
+18,Boycey,Camplen,bcamplenh@newyorker.com,914-607-3062,85605 Jana Way,Manaulanan,Philippines,2622,active
+19,Adey,Lineham,alinehami@angelfire.com,917-243-6402,13 Cardinal Trail,Tabia,Morocco,,pending
+20,Cassi,Mellodey,cmellodeyj@biglobe.ne.jp,912-286-6275,87143 Butterfield Point,Beiyang,China,,pending
+21,Hadlee,Kitteman,hkittemank@pen.io,106-377-0901,65839 Heath Place,Langjun,China,,inactive
+22,Arturo,Lemanu,alemanul@economist.com,380-683-4171,365 Troy Lane,Līgatne,Latvia,,inactive
+23,Ketty,Mynett,kmynettm@lulu.com,628-457-1382,3097 Kim Road,Passo Fundo,Brazil,99000-000,inactive
+24,Xaviera,Coytes,xcoytesn@go.com,853-223-3807,6256 Dakota Hill,Spas’ke,Ukraine,,active
+25,Seana,Drissell,sdrissello@independent.co.uk,507-169-3586,1966 Commercial Hill,Châteauroux,France,36009 CEDEX,active
+26,Greer,Kinmond,gkinmondp@senate.gov,861-583-7126,71 Morningstar Road,Raheny,Ireland,D17,active
+27,Kora,Gusticke,kgustickeq@about.me,355-756-6482,349 Dryden Park,Koumac,New Caledonia,98850,active
+28,Felipe,Muston,fmustonr@parallels.com,713-439-0624,4046 Basil Alley,Mirandela,Portugal,5370-182,pending
+29,Audrye,Dibbin,adibbins@google.com,577-235-5470,64 Loomis Park,Fengshan,China,,active
+30,Hendrick,Hackelton,hhackeltont@t-online.de,879-916-2258,2 Lyons Hill,Gaotian,China,,active
+31,Karil,Middas,kmiddasu@google.fr,818-439-1821,45476 Reindahl Parkway,Cibenda,Indonesia,,pending
+32,Beitris,Summerscales,bsummerscalesv@surveymonkey.com,155-566-8648,4 Fairfield Way,Taoyuan,China,,pending
+33,Teri,Hrinishin,thrinishinw@tinypic.com,678-460-1696,26 Delladonna Trail,Guaratuba,Brazil,83280-000,inactive
+34,Laurella,Kinvig,lkinvigx@networkadvertising.org,929-531-2152,32975 Eastlawn Parkway,San Fernando,Philippines,8711,inactive
+35,Connie,Voss,cvossy@usatoday.com,696-125-7916,65749 Hermina Crossing,Čejkovice,Czech Republic,671 65,inactive
+36,Mohandis,Garrettson,mgarrettsonz@unesco.org,183-864-8660,1929 Debra Road,Limbaan,Philippines,8104,pending
+37,Niki,Galletley,ngalletley10@mozilla.org,461-407-2054,54 Carpenter Road,Roissy Charles-de-Gaulle,France,95719 CEDEX 1,active
+38,Roxana,Hemphill,rhemphill11@jimdo.com,808-318-4685,916 Transport Park,Duszniki-Zdrój,Poland,57-340,inactive
+39,Melva,Ayton,mayton12@creativecommons.org,888-242-7176,999 Dovetail Crossing,Zolotonosha,Ukraine,,pending
+40,Tatiania,Walak,twalak13@uiuc.edu,522-968-1334,2 Dottie Parkway,Uchaly,Russia,453703,active
+41,Amara,Austin,aaustin14@jimdo.com,922-807-7777,33 Warrior Plaza,Wenquan,China,,active
+42,Dorey,Hartfleet,dhartfleet15@un.org,584-886-1896,0745 Ohio Court,Luokou,China,,pending
+43,Becca,Vankin,bvankin16@google.com,196-339-8911,391 Johnson Circle,Lerrnanist,Armenia,,pending
+44,Claudell,Todeo,ctodeo17@prlog.org,866-770-7506,1 Tennyson Way,Stockholm,Sweden,106 32,active
+45,Eleni,Purcell,epurcell18@go.com,384-792-9777,07398 Ramsey Court,Pacar,Indonesia,,inactive
+46,Noelle,Voff,nvoff19@google.co.uk,225-778-6657,2853 Erie Parkway,Qal‘ah-ye Shāhī,Afghanistan,,active
+47,Rosabella,Garm,rgarm1a@nyu.edu,362-536-8214,44838 Lawn Crossing,Xiaochuan,China,,pending
+48,Rosetta,Fealey,rfealey1b@salon.com,873-998-4437,4 Fallview Point,Francisco Sarabia,Mexico,29783,inactive
+49,Katharine,Phlippi,kphlippi1c@redcross.org,448-494-6462,525 Ridgeway Alley,Stavropol’,Russia,356235,pending
+50,Domini,Brydone,dbrydone1d@list-manage.com,585-645-4870,58 Elmside Alley,Chernogorsk,Russia,655138,inactive
+51,Clark,Trobridge,ctrobridge1e@noaa.gov,807-529-1003,4930 Steensland Crossing,Crossfield,Canada,B0N,active
+52,Aluino,Boatright,aboatright1f@shutterfly.com,714-463-9216,60638 Rutledge Avenue,Stavropol’,Russia,356235,pending
+53,Cointon,Beckham,cbeckham1g@wisc.edu,956-955-3455,3 Glacier Hill Court,Banawang,Philippines,2107,active
+54,Ivor,Young,iyoung1h@marketwatch.com,830-875-7493,2405 Quincy Parkway,Bilhorod-Dnistrovs’kyy,Ukraine,,pending
+55,Towny,Amiranda,tamiranda1i@exblog.jp,166-432-6975,3 Hazelcrest Court,Luxor,Egypt,,pending
+56,Misha,Hawkes,mhawkes1j@addtoany.com,158-287-3754,1339 Comanche Plaza,Cisiec,Poland,34-383,inactive
+57,Ginnie,Bernade,gbernade1k@earthlink.net,540-274-6429,474 Susan Park,Rossosh’,Russia,689400,active
+58,Rita,Busswell,rbusswell1l@fda.gov,230-794-1236,0 Pankratz Plaza,Sumberpitu,Indonesia,,active
+59,Alena,Kharchinski,akharchinski1m@engadget.com,383-219-9891,81 Oneill Circle,Nzega,Rwanda,,inactive
+60,Sheelah,Dagon,sdagon1n@ucoz.com,651-874-0650,1101 Eastwood Avenue,Druya,Belarus,,inactive
+61,Nollie,Rushbrooke,nrushbrooke1o@vimeo.com,229-532-6993,3 Redwing Court,Zhouling,China,,pending
+62,Hobard,O'Lagene,holagene1p@jalbum.net,458-524-0665,5 Clarendon Drive,Kota Kinabalu,Malaysia,88661,pending
+63,Barbabra,Dufore,bdufore1q@macromedia.com,267-201-9389,0 Morning Junction,Tinta,Peru,,pending
+64,Bancroft,Vokins,bvokins1r@google.es,866-695-7267,3 Eagan Point,Maebaru,Japan,865-0126,pending
+65,Garrett,Stamp,gstamp1s@homestead.com,321-484-0946,92577 Morning Avenue,Kulunda,Russia,249070,active
+66,Franklyn,Rogerson,frogerson1t@liveinternet.ru,189-241-9456,5612 Carpenter Parkway,Shisandaogou,China,,active
+67,Prent,Johananoff,pjohananoff1u@ucoz.ru,513-575-8701,62 Morning Plaza,Sabhā,Libya,,inactive
+68,Carroll,Domokos,cdomokos1v@miibeian.gov.cn,764-494-0499,2288 Golden Leaf Crossing,Iracemápolis,Brazil,13495-000,inactive
+69,Jacquelin,Spilling,jspilling1w@fema.gov,668-311-9637,985 Lillian Crossing,Zaoshi,China,,active
+70,Gertrudis,Daymond,gdaymond1x@mapy.cz,590-277-3408,94 Cherokee Terrace,Trondheim,Norway,7479,pending
+71,Reeva,Murrigans,rmurrigans1y@taobao.com,162-177-7006,89529 Anderson Avenue,Samdrup Jongkhar,Bhutan,,inactive
+72,Gisella,Cleiment,gcleiment1z@gizmodo.com,114-105-9673,102 Buhler Terrace,Bryansk,Russia,241904,pending
+73,Frazier,Garnam,fgarnam20@archive.org,624-261-0809,18 Maywood Pass,Hartola,Finland,19601,active
+74,Denny,Baxendale,dbaxendale21@ucoz.com,510-396-0477,2 Dorton Crossing,Genang,Indonesia,,pending
+75,Cassi,Creigan,ccreigan22@angelfire.com,687-147-8668,094 Rockefeller Way,Rive-de-Gier,France,42809 CEDEX,active
+76,Marilee,Shuard,mshuard23@abc.net.au,844-331-5716,7 Mosinee Center,Neochóri,Greece,,inactive
+77,Kathi,Bartholin,kbartholin24@wordpress.com,628-528-3069,787 Green Street,Tarbes,France,65022 CEDEX 9,pending
+78,D'arcy,Brayfield,dbrayfield25@networksolutions.com,310-626-9355,419 Declaration Junction,Fresno,United States,93762,pending
+79,Pooh,Blurton,pblurton26@lycos.com,115-270-9561,7323 Texas Parkway,Obudu,Nigeria,,inactive
+80,Chance,Feehan,cfeehan27@bizjournals.com,862-520-7957,96 Dennis Trail,Daba,China,,inactive
+81,Adelind,O'Ferris,aoferris28@fc2.com,913-469-0483,8641 Lien Circle,Dasht-e Lati,Iran,,pending
+82,Abby,Silmon,asilmon29@mozilla.com,812-959-4931,2688 Bluejay Center,Bloomington,United States,47405,pending
+83,Vittoria,Walwood,vwalwood2a@reference.com,363-128-3327,874 Eagan Terrace,Alejal,Philippines,9205,active
+84,Rana,Grishkov,rgrishkov2b@t-online.de,375-186-0558,733 Iowa Junction,Lianghe,China,,active
+85,Florry,Gleeton,fgleeton2c@statcounter.com,887-903-6035,0837 Chinook Place,Francisco Beltrão,Brazil,85600-000,pending
+86,Darryl,Fierro,dfierro2d@admin.ch,275-449-8635,20 Rigney Center,Pisz,Poland,12-201,pending
+87,Kalila,Janiszewski,kjaniszewski2e@ibm.com,865-880-1565,9330 Doe Crossing Avenue,Lac-Brome,Canada,L9G,pending
+88,Shelley,Morrad,smorrad2f@miibeian.gov.cn,634-345-5786,23 Granby Junction,Kharagauli,Georgia,,pending
+89,Victoria,Wimpey,vwimpey2g@smh.com.au,193-675-0456,4867 Moose Lane,Cascavel,Brazil,85800-000,pending
+90,Jase,Kullmann,jkullmann2h@amazon.co.jp,831-118-2422,5590 Sachtjen Trail,Ipaba,Brazil,35198-000,inactive
+91,Rosella,D'Aulby,rdaulby2i@ameblo.jp,493-624-3124,3 Lien Hill,Al Khārijah,Egypt,,inactive
+92,Chaunce,Winks,cwinks2j@freewebs.com,771-103-2255,62093 Victoria Drive,Villa Yapacaní,Bolivia,,active
+93,Derek,McAviy,dmcaviy2k@nytimes.com,254-432-5071,747 Eliot Trail,Jayapura,Indonesia,,inactive
+94,Bernie,Silson,bsilson2l@feedburner.com,870-558-6356,4434 Di Loreto Park,Jabonga,Philippines,8607,inactive
+95,Farris,Pendlebury,fpendlebury2m@printfriendly.com,989-180-8533,6 Bashford Junction,Zliten,Libya,,inactive
+96,Wynnie,Foxworthy,wfoxworthy2n@sciencedirect.com,781-182-4862,74 Oak Circle,Sundsvall,Sweden,853 56,pending
+97,Klemens,Bosley,kbosley2o@alibaba.com,335-520-3756,055 Coolidge Lane,Victoria,Argentina,3153,active
+98,Rockwell,Gowthorpe,rgowthorpe2p@sciencedaily.com,639-868-9066,3264 Clyde Gallagher Way,Roa,Indonesia,,active
+99,Rebecka,Eshmade,reshmade2q@eventbrite.com,396-431-9102,537 Anderson Parkway,Petrovskoye,Russia,152130,active
+100,Inga,Bliben,ibliben2r@linkedin.com,168-953-5968,36740 Onsgard Terrace,L'Île-Perrot,Canada,H9X,pending
