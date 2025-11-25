@@ -1,40 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login – Cameron IP</title>
-
-  <link rel="stylesheet" href="../static/css/style.css">
-  <script src="../static/js/app.js" defer></script>
+  <link rel="stylesheet" href="../static/style.css">
 </head>
 
 <body>
+  <header>
+    <div class="logo">Cameron IP</div>
+  </header>
 
-  <main style="max-width: 400px; margin-top: 80px;">
-    <!-- {% extends "base.html" %}
-
-    {% block title %}Dashboard – Cameron IP{% endblock %}
-
-    {% block content %} -->
-    <h1>Login</h1>
-
-    <form class="form-container" onsubmit="return loginUser(event)">
-
-      <label class="form-label">Username:</label>
-      <input type="text" id="username" class="form-input" required>
-
-      <label class="form-label">Password:</label>
-      <input type="password" id="password" class="form-input" required>
-
-      <button class="btn" type="submit">Log In</button>
-    </form>
-
-    <div id="login-error" class="result-box" style="display:none; margin-top:20px; color:red;">
-      Invalid username or password.
+  <main>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form>
+        <input type="text" placeholder="Username" required />
+        <input type="password" placeholder="Password" required />
+        <button class="btn">Login</button>
+      </form>
     </div>
-    <!-- {% endblock %} -->
   </main>
 
+  <footer>
+    © 2025 Cameron Intellectual Property Ltd. All rights reserved.
+  </footer>
 </body>
 </html>
