@@ -1,0 +1,89 @@
+/* This a placeholder CSS file for styling purposes. Probably gonna stay empty but it's here just in case. */
+
+:root {
+  --brand-purple: #6B3FA0;
+  --brand-grey: #E5E5E5;
+  --brand-dark: #333;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: white;
+  color: var(--brand-dark);
+}
+
+.navbar {
+  background: var(--brand-purple);
+  padding: 15px 40px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.btn {
+  background: var(--brand-purple);
+  padding: 10px 16px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dashboard-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 20px;
+  background: var(--brand-grey);
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin-top: 30px;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.form-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.section-title {
+  margin-top: 30px;
+  color: var(--brand-purple);
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--brand-purple);
+  padding-bottom: 4px;
+}
+
+.result-box {
+  margin-top: 20px;
+  background: var(--brand-grey);
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
