@@ -13,20 +13,34 @@ body {
   color: var(--brand-dark);
 }
 
-.navbar {
-  background: var(--brand-purple);
-  padding: 15px 40px;
+header {
+  background-color: var(--brand-purple);
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 40px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.navbar a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
 }
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 1rem;
+  transition: opacity 0.3s;
+}
+
+header nav a:hover {
+  opacity: 0.8;
+}
+
 
 .btn {
   background: var(--brand-purple);
