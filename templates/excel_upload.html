@@ -3,68 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mailchimp Upload Builder – Cameron IP</title>
+  <title>Excel Upload – Cameron IP</title>
 
-  <!-- Use your existing stylesheet -->
+  <!-- Correct CSS path for YOUR project -->
   <link rel="stylesheet" href="../static/css/style.css">
+  <script>
+  // Simulated login state using localStorage
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
 </head>
 
 <body>
+
+  <!-- Header Navigation -->
   <header>
-    <div class="logo">Cameron IP</div>
+    <div class="logo">
+  <img src="../static/images/cameron-logo.png" alt="Cameron IP Logo">
+</div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="database.html">Database</a>
+      <a href="dashboard.html">Dashboard</a>
       <a href="mailchimp.html">Mailchimp</a>
+      <a href="sharepoint.html">SharePoint</a>
+      <a href="excel_upload.html">Excel Tools</a>
     </nav>
   </header>
 
   <main>
-    <h1>Mailchimp Upload Builder</h1>
 
-    <form action="/process" method="post" enctype="multipart/form-data" class="form-container">
+    <h1>Upload Excel File</h1>
+    <p>Upload an Excel (.xlsx) file to compare, clean, or convert into CSV.</p>
 
-      <!-- Upload Date Label -->
-      <label class="form-label">Upload date label (e.g. "Upload 03-Nov-25"):</label>
-      <input type="text" name="upload_date_label" required class="form-input"/>
+    <!-- Upload Form -->
+    <form enctype="multipart/form-data" class="form-container">
+      <label class="form-label">Select Excel file (.xlsx):</label>
+      <input type="file" accept=".xlsx" class="form-input" required>
 
-      <!-- EQ Section -->
-      <h2 class="section-title">Equinox (EQ)</h2>
-
-      <label class="form-label">EQ base – start of period:</label>
-      <input type="file" name="eq_base_start" class="form-input" />
-
-      <label class="form-label">EQ base – end of period:</label>
-      <input type="file" name="eq_base_end" class="form-input" />
-
-      <!-- SharePoint Section -->
-      <h2 class="section-title">SharePoint Downloads</h2>
-
-      <label class="form-label">UK Direct:</label>
-      <input type="file" name="sp_uk_direct" class="form-input"/>
-
-      <label class="form-label">UK Referrers:</label>
-      <input type="file" name="sp_uk_referrers" class="form-input"/>
-
-      <label class="form-label">US Direct:</label>
-      <input type="file" name="sp_us_direct" class="form-input"/>
-
-      <label class="form-label">US Agents:</label>
-      <input type="file" name="sp_us_agents" class="form-input"/>
-
-      <!-- ROW Agents -->
-      <h2 class="section-title">ROW Agents</h2>
-      <label class="form-label">ROW Agents:</label>
-      <input type="file" name="row_agents" class="form-input"/>
-
-      <!-- Website Signups -->
-      <h2 class="section-title">Website Sign-ups</h2>
-      <label class="form-label">Website lists:</label>
-      <input type="file" name="website_list" class="form-input"/>
-
-      <button class="btn" type="submit">Generate Mailchimp Upload</button>
-
+      <button class="btn" type="submit">Upload</button>
     </form>
+
+    <!-- Placeholder (for future Django results) -->
+    <div class="result-box">
+      <p>This area will display file validation results or formatted output once processing is added.</p>
+    </div>
+
   </main>
 
   <footer>
