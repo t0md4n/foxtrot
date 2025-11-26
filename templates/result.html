@@ -7,11 +7,19 @@
 
   <!-- Link to your CSS -->
   <link rel="stylesheet" href="../static/css/style.css">
+  <script>
+  // Simulated login state using localStorage
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
 </head>
 
 <body>
   <header>
-    <div class="logo">Cameron IP</div>
+    <div class="logo">
+  <img src="../static/images/cameron-logo.png" alt="Cameron IP Logo">
+</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="database.html">Database</a>
