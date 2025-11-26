@@ -7,12 +7,7 @@
 
   <!-- Link to your CSS -->
   <link rel="stylesheet" href="../static/css/style.css">
-  <script>
-  // Simulated login state using localStorage
-  if (localStorage.getItem("loggedIn") !== "true") {
-    window.location.href = "login.html";
-  }
-</script>
+
 </head>
 
 <body>
@@ -28,6 +23,11 @@
   </header>
 
   <main>
+    <!-- {% extends "base.html" %}
+
+    {% block title %}Dashboard – Cameron IP{% endblock %}
+
+    {% block content %} -->
     <h1>Processing Results</h1>
 
     <p>This page will display the processed output once your files have been handled by the system.</p>
@@ -39,8 +39,9 @@
     <a href="mailchimp.html" class="btn" style="margin-top: 20px; display: inline-block;">
       Back to Mailchimp Upload
     </a>
+    <!-- {% endblock %} -->
   </main>
-
+  
   <footer>
     © 2025 Cameron Intellectual Property Ltd. All rights reserved.
   </footer>
