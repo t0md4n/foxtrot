@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<title>Error</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .error { color: red; background-color: #ffe6e6; padding: 20px; border-radius: 8px; }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Configuration Error</h1>
+    <div class="error">
+        <p><strong>{{ message }}</strong></p>
+    </div>
+    <p>Please ensure the following environment variables are set:</p>
+    <ul>
+        <li>MAILCHIMP_API_KEY</li>
+        <li>MAILCHIMP_AUDIENCE_ID</li>
+    </ul>
+    <a href="/" class="back-button">Go Back</a>
+</body>
+</html>
+</html>

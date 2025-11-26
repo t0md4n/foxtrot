@@ -13,26 +13,46 @@ def _read_any_excel_or_csv(file_storage):
         return pd.read_csv(file_storage)
     else:
         return pd.read_excel(file_storage)
+
+def _get_column(df, possible_names):
+    """Try to find a column by checking possible names (case-insensitive)"""
+    df_columns_lower = {col.lower(): col for col in df.columns}
+    for name in possible_names:
+        if name.lower() in df_columns_lower:
+            return df_columns_lower[name.lower()]
+    # If not found, return the first option
+    return possible_names[0]
     
 def process_sp_files(uploaded_file, upload_date_label: str, list_type: str) -> pd.DataFrame:
     # List Types: UK_DIRECT, UK_REFERRERS, US_DIRECT, US_REFERRERS
     df_raw = _read_any_excel_or_csv(uploaded_file)
 
-    #Normalise the columns
+    # Print available columns for debugging
+    print(f"Available columns in uploaded file: {list(df_raw.columns)}")
+
+    # Normalise the columns
     df = pd.DataFrame()
+
+    # Try to find columns with flexible naming
+    fname_col = _get_column(df_raw, ["First Name", "Fname", "FirstName","first_name"])
+    lname_col = _get_column(df_raw, ["Last Name", "Lname", "LastName", "last_name"])
+    email_col = _get_column(df_raw, ["Contact Email Address", "Email", "Email Address", "email", "Email1"])
+    org_col = _get_column(df_raw, ["Organisation", "Organization", "Company", "organisation"])
+
+
     df["Fname"] = df_raw["First Name"].fillna("").astype(str).str.strip()
     df["Lname"] = df_raw["Last Name"].fillna("").astype(str).str.strip()
     df["Name"] = (df["Fname"] + " " + df["Lname"]).str.strip()
     df["Email1"] = df_raw["Contact Email Address"].fillna("").astype(str).str.strip()
     df["Organisation"] = df_raw["Organisation"].fillna("").astype(str).str.strip()
 
-    #Country based on the List Type
+    # Country based on the List Type
     if list_type in ["UK_DIRECT", "UK_REFERRERS"]:
         df["Country"] = "GB"
     else:
         df["Country"] = "US"
     
-    #Tags
+    # Tags
     tags_list = []
 
     for idx, row in df_raw.iterrows():
@@ -69,7 +89,7 @@ def process_sp_files(uploaded_file, upload_date_label: str, list_type: str) -> p
             else:
                 tags.append("US - Region Unknown")
         
-        #Technical interests
+        # Technical interests
         interests = technical_tags_to_interest(row.get("Technical Tags"))
         tags.extend(interests)
 

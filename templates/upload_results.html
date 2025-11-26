@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+    <title>Mailchimp Upload Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            max-width: 1000px;
+        }
+        .summary {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .success { color: green; font-weight: bold; }
+        .failure { color: red; font-weight: bold; }
+        .errors-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .errors-table th, .errors-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .errors-table th {
+            background-color: #f44336;
+            color: white;
+        }
+        .errors-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mailchimp Upload Results</h1>
+
+    <div class="summary">
+        <h2>Summary</h2>
+        <p><strong>Total Contacts Processed:</strong> {{ results.total }}</p>
+        <p class="success"><strong>Successfully Uploaded:</strong> {{ results.successful }}</p>
+        <p class="failure"><strong>Failed to Upload:</strong> {{ results.failed }}</p>
+    </div>
+
+    {% if results.errors %}
+    <div class="errors">
+        <h2>Error Details</h2>
+        <p>The following contacts could not be uploaded:</p>
+        <table class="errors-table">
+            <thead>
+                <tr>
+                    <th>Email Address</th>
+                    <th>Error Reason</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for error in results.errors %}
+                <tr>
+                    <td>{{ error.email }}</td>
+                    <td>{{ error.reason }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="success">
+        <h2>All contacts uploaded successfully!</h2>
+    </div>
+    {% endif %}
+
+    <a href="/" class="back-button">Upload More Files</a>
+</body>
+</html>
