@@ -7,12 +7,7 @@
 
   <!-- Correct CSS path for YOUR project -->
   <link rel="stylesheet" href="../static/css/style.css">
-  <script>
-  // Simulated login state using localStorage
-  if (localStorage.getItem("loggedIn") !== "true") {
-    window.location.href = "login.html";
-  }
-</script>
+ 
 </head>
 
 <body>
@@ -31,7 +26,11 @@
   </header>
 
   <main>
+    <!-- {% extends "base.html" %}
 
+    {% block title %}Dashboard – Cameron IP{% endblock %}
+
+    {% block content %}  -->
     <h1>Upload Excel File</h1>
     <p>Upload an Excel (.xlsx) file to compare, clean, or convert into CSV.</p>
 
@@ -47,7 +46,7 @@
     <div class="result-box">
       <p>This area will display file validation results or formatted output once processing is added.</p>
     </div>
-
+    <!-- {% endblock %} -->
   </main>
 
   <footer>

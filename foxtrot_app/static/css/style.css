@@ -75,6 +75,12 @@ header nav a:hover {
   transform: translateY(-2px);
 }
 
+nav a.active {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+
 /* Buttons */
 .btn {
   background: var(--brand-purple);
@@ -242,4 +248,33 @@ footer {
   header nav a {
     margin-left: 15px;
   }
+}
+
+.success-box {
+  background: #e9ffe9;
+  border-left: 5px solid #28a745;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.error-box {
+  background: #ffeaea;
+  border-left: 5px solid #d63031;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.loader {
+  border: 4px solid #ddd;
+  border-top: 4px solid var(--brand-purple);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
 }

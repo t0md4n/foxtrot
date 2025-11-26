@@ -7,17 +7,16 @@
 
   <link rel="stylesheet" href="../static/css/style.css">
   <script src="../static/js/app.js" defer></script>
-  <script>
-  // Simulated login state using localStorage
-  if (localStorage.getItem("loggedIn") !== "true") {
-    window.location.href = "login.html";
-  }
-</script>
 </head>
 
 <body>
 
   <main style="max-width: 400px; margin-top: 80px;">
+    <!-- {% extends "base.html" %}
+
+    {% block title %}Dashboard – Cameron IP{% endblock %}
+
+    {% block content %} -->
     <h1>Login</h1>
 
     <form class="form-container" onsubmit="return loginUser(event)">
@@ -34,7 +33,7 @@
     <div id="login-error" class="result-box" style="display:none; margin-top:20px; color:red;">
       Invalid username or password.
     </div>
-
+    <!-- {% endblock %} -->
   </main>
 
 </body>
