@@ -5,11 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard – Cameron IP</title>
   <link rel="stylesheet" href="../static/css/style.css">
+  <script>
+  // Simulated login state using localStorage
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
 </head>
 
 <body>
   <header>
-    <div class="logo">Cameron IP</div>
+    <div class="logo">
+  <img src="../static/images/cameron-logo.png" alt="Cameron IP Logo">
+</div>
     <nav>
       <a href="dashboard.html">Dashboard</a>
       <a href="mailchimp.html">Mailchimp</a>
