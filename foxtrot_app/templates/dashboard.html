@@ -5,12 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard – Cameron IP</title>
   <link rel="stylesheet" href="../static/css/style.css">
-  <script>
-  // Simulated login state using localStorage
-  if (localStorage.getItem("loggedIn") !== "true") {
-    window.location.href = "login.html";
-  }
-</script>
+
 </head>
 
 <body>
@@ -27,6 +22,11 @@
   </header>
 
   <main>
+    <!-- {% extends "base.html" %}
+
+    {% block title %}Dashboard – Cameron IP{% endblock %}
+
+    {% block content %} -->
     <h1>Welcome to the Cameron IP Web App</h1>
 
     <div class="dashboard-grid">
@@ -45,6 +45,7 @@
         <p>Upload and generate Mailchimp files.</p>
       </a>
     </div>
+    <!-- {% endblock %} -->
   </main>
 
   <footer>
