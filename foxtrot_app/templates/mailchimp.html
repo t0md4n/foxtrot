@@ -4,29 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mailchimp Upload Builder – Cameron IP</title>
-  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
 
 <body>
   <header>
     <div class="logo">
-  <img src="../static/images/cameron-logo.png" alt="Cameron IP Logo">
-</div>
+      <img src="{{ url_for('static', filename='images/cameron-logo.png') }}" alt="Cameron IP Logo">
+    </div>
     <nav>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="mailchimp.html">Mailchimp</a>
-      <a href="sharepoint.html">SharePoint</a>
-      <a href="excel_upload.html">Excel Tools</a>
+      <a href="{{ url_for('dashboard') }}">Dashboard</a>
+      <a href="{{ url_for('mailchimp') }}">Mailchimp</a>
+      <a href="{{ url_for('sharepoint') }}">SharePoint</a>
+      <a href="{{ url_for('index') }}">Excel Tools</a>
     </nav>
   </header>
 
   <main>
-    <!-- {% extends "base.html" %}
-
-    {% block title %}Dashboard – Cameron IP{% endblock %}
-
-    {% block content %} -->
     <h1>Mailchimp Upload Builder</h1>
 
     <form action="/process" method="post" enctype="multipart/form-data" class="form-container">
@@ -63,7 +58,6 @@
 
       <button class="btn" type="submit">Generate Mailchimp Upload</button>
     </form>
-    <!-- {% endblock %} -->
   </main>
   
   <footer>

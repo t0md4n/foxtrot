@@ -19,8 +19,7 @@ from processors.website import process_website_files
 from processors.row_agents import process_row_agents_files
 from processors.common import CONTACT_COLUMNS
 
-app = Flask(__name__)
-
+app = Flask(__name__, template_folder='foxtrot_app/templates', static_folder='foxtrot_app/static')
 def validate_mailchimp_config():
     """Validate Mailchimp environment variables are set"""
     api_key = os.environ.get("MAILCHIMP_API_KEY")
@@ -239,7 +238,19 @@ def upload_to_mailchimp_and_show_results(combined):
 
 @app.route("/", methods=["GET"])
 def index():
-    return render_template("upload.html")
+    return render_template("excel_upload.html")
+
+@app.route("/dashboard", methods=["GET"])
+def dashboard():
+    return render_template("dashboard.html")
+
+@app.route("/mailchimp", methods=["GET"])
+def mailchimp():
+    return render_template("mailchimp.html")
+
+@app.route("/sharepoint", methods=["GET"])
+def sharepoint():
+    return render_template("sharepoint.html")
 
 @app.route("/process", methods=["POST"])
 def process():
