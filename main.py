@@ -68,6 +68,7 @@ def get_mailchimp_client():
         "api_key": api_key,
         "server": server_prefix
     })
+    client.timeout = 30.0 #constantly encountering timout errors.
     return client
 
 
