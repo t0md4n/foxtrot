@@ -28,11 +28,16 @@ Installation:
 
 5. Install dependencies: pip install -r requirements.txt
 
-6. Configure environment variables: Copy .env.example to your .env file and fill in
+6. Configure environment variables: Copy .env.example to your .env
+   Create an .env file and place this with your own values in it:
+   MAILCHIMP_API_KEY=your-api-key-here
+   MAILCHIMP_AUDIENCE_ID=your-audience-id-here
+   SECRET_KEY=generate-random-string
+   FLASK_ENV=development
 
-7. Run the application: python main.py
+8. Run the application: python main.py
 
-8. Open in browser: Click on the link in terminal that appears after running - It should look something like https://localhost:5000
+9. Open in browser: Click on the link in terminal that appears after running - It should look something like https://localhost:5000
 
 Features List:
 1. Dashboard:
@@ -116,3 +121,4 @@ For application testing:
     Click "Generate and upload to Mailchimp"
 
 Render deployment(if it's still live): https://foxtrot-venv-deployment.onrender.com/
+
