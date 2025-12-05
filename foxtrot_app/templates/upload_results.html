@@ -1,0 +1,95 @@
+Upload results · HTML
+Copy
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Results – Cameron IP</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/cameron-logo.png') }}" alt="Cameron IP Logo">
+    </div>
+    <nav>
+      <a href="{{ url_for('dashboard') }}">Dashboard</a>
+      <a href="{{ url_for('mailchimp') }}">Mailchimp</a>
+      <a href="{{ url_for('sharepoint') }}">SharePoint</a>
+      <a href="{{ url_for('index') }}">Excel Tools</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Mailchimp Upload Results</h1>
+
+    {% if results.successful > 0 %}
+    <div class="success-box">
+      <h2>✓ Upload Successful</h2>
+      <p><strong>{{ results.successful }}</strong> out of <strong>{{ results.total }}</strong> contacts were uploaded successfully.</p>
+    </div>
+    {% endif %}
+
+    {% if results.failed > 0 %}
+    <div class="error-box">
+      <h2>⚠ Some Uploads Failed</h2>
+      <p><strong>{{ results.failed }}</strong> contacts failed to upload.</p>
+    </div>
+    {% endif %}
+
+    <div class="result-box" style="margin-top: 30px;">
+      <h3>Summary</h3>
+      <table class="styled-table" style="margin-top: 15px;">
+        <tr>
+          <td><strong>Total Contacts:</strong></td>
+          <td>{{ results.total }}</td>
+        </tr>
+        <tr>
+          <td><strong>Successful:</strong></td>
+          <td style="color: green;">{{ results.successful }}</td>
+        </tr>
+        <tr>
+          <td><strong>Failed:</strong></td>
+          <td style="color: red;">{{ results.failed }}</td>
+        </tr>
+      </table>
+    </div>
+
+    {% if results.errors %}
+    <div class="result-box" style="margin-top: 30px;">
+      <h3>Error Details</h3>
+      <div class="table-container">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for error in results.errors %}
+            <tr>
+              <td>{{ error.email }}</td>
+              <td>{{ error.reason }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endif %}
+
+    <div style="margin-top: 30px;">
+      <a href="{{ url_for('mailchimp') }}" class="btn">Upload More Contacts</a>
+      <a href="{{ url_for('dashboard') }}" class="btn" style="margin-left: 10px; background-color: #666;">Back to Dashboard</a>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Cameron Intellectual Property Ltd. All rights reserved.
+  </footer>
+</body>
+</html>

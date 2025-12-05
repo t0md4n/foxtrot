@@ -1,0 +1,280 @@
+/* ===============================
+   Cameron IP Web App Stylesheet
+   Complete + Polished + Merged
+   =============================== */
+
+/* Brand Colours */
+:root {
+  --brand-purple: #6B3FA0;
+  --brand-grey: #E5E5E5;
+  --brand-dark: #333;
+  --brand-light-grey: #F5F5F5;
+}
+
+/* Base Layout */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: white;
+  color: var(--brand-dark);
+}
+
+/* Page Container */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Header */
+/* Header Wrapper */
+header {
+  background-color: var(--brand-purple);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  height: 70px;                   /* consistent header height */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Logo Container */
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo Image */
+header .logo img {
+  height: 48px;                  /* polished size */
+  width: auto;
+  object-fit: contain;
+  margin-right: 8px;
+  display: block;
+}
+
+/* Navigation */
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 35px;                     /* better spacing between links */
+}
+
+/* Navigation links */
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: opacity 0.3s, transform 0.2s;
+}
+
+header nav a:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+nav a.active {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+
+/* Buttons */
+.btn {
+  background: var(--brand-purple);
+  padding: 10px 16px;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #5c3590;
+  transform: translateY(-2px);
+}
+
+/* Dashboard Grid */
+/* Dashboard Grid */
+.dashboard-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-items: center;  /* centers cards visually */
+}
+
+/* Dashboard Cards */
+.card {
+  width: 100%;
+  max-width: 320px;        /* prevents over-stretching on wide screens */
+  padding: 25px;
+  background: var(--brand-grey);
+  border-radius: 12px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: block;
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: translateY(-4px);                           /* subtle lift */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);               /* nicer shadow */
+}
+
+/* Card Title */
+.card h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Card Description */
+.card p {
+  margin-top: 8px;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+
+/* Form Layout */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin-top: 25px;
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.form-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Section Titles */
+.section-title {
+  margin-top: 40px;
+  color: var(--brand-purple);
+  font-size: 1.4rem;
+  border-bottom: 3px solid var(--brand-purple);
+  padding-bottom: 5px;
+}
+
+/* Result Box */
+.result-box {
+  margin-top: 25px;
+  background: var(--brand-light-grey);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 6px solid var(--brand-purple);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Table Styling (SharePoint) */
+.table-container {
+  margin-top: 20px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 0.95rem;
+}
+
+.styled-table th {
+  background-color: var(--brand-purple);
+  color: white;
+  padding: 10px;
+}
+
+.styled-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #f6f6f6;
+}
+
+.btn-small {
+  background-color: var(--brand-purple);
+  color: white;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-small:hover {
+  background-color: #5c3590;
+}
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  text-align: center;
+  padding: 15px 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Responsive Behaviour */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 25px;
+  }
+
+  header nav {
+    margin-top: 10px;
+  }
+
+  header nav a {
+    margin-left: 15px;
+  }
+}
+
+.success-box {
+  background: #e9ffe9;
+  border-left: 5px solid #28a745;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.error-box {
+  background: #ffeaea;
+  border-left: 5px solid #d63031;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.loader {
+  border: 4px solid #ddd;
+  border-top: 4px solid var(--brand-purple);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}

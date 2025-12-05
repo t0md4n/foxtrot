@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% block title %}Cameron IP – Web Tools{% endblock %}</title>
+
+  <!-- Static CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+  <!-- Shared Header -->
+  <header>
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/cameron-logo.png') }}" alt="Cameron IP Logo">
+    </div>
+
+    <nav>
+      <a href="{{ url_for('dashboard') }}">Dashboard</a>
+      <a href="{{ url_for('mailchimp') }}">Mailchimp</a>
+      <a href="{{ url_for('sharepoint') }}">SharePoint</a>
+      <a href="{{ url_for('index') }}">Excel Tools</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Cameron Intellectual Property Ltd. All rights reserved.
+  </footer>
+
+</body>
+</html>
