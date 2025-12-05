@@ -237,9 +237,7 @@ def upload_to_mailchimp_and_show_results(combined):
 
             results["successful"] += 1
 
-            # Rate limiting - Mailchimp allows ~10 requests/second
-            # We use 0.11s delay to stay safely under the limit (~9 req/s)
-            time.sleep(0.11)
+            time.sleep(0.05) # 0.05s = 20 requests a second. Under Mailchimp's limit
 
         except ApiClientError as e:
             results["failed"] += 1
