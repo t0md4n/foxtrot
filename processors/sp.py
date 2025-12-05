@@ -20,7 +20,7 @@ def _get_column(df, possible_names):
     for name in possible_names:
         if name.lower() in df_columns_lower:
             return df_columns_lower[name.lower()]
-    # If not found, return None to indicate missing column
+    # If not found, return None
     return None
     
 def process_sp_files(uploaded_file, upload_date_label: str, list_type: str) -> pd.DataFrame:
@@ -28,28 +28,36 @@ def process_sp_files(uploaded_file, upload_date_label: str, list_type: str) -> p
     df_raw = _read_any_excel_or_csv(uploaded_file)
 
     # Print available columns for debugging
-    print(f"Available columns in uploaded file: {list(df_raw.columns)}")
+    print(f"Processing {list_type} - Available columns: {list(df_raw.columns)}")
 
     # Normalise the columns
     df = pd.DataFrame()
 
     # Try to find columns with flexible naming
-    fname_col = _get_column(df_raw, ["First Name", "Fname", "FirstName", "first_name"])
-    lname_col = _get_column(df_raw, ["Last Name", "Lname", "LastName", "last_name"])
-    email_col = _get_column(df_raw, ["Contact Email Address", "Email", "Email Address", "email", "Email1"])
+    # US files use: First Name, Last Name, Contact Email Address
+    # UK files use: Fname, Lname, Email1
+    fname_col = _get_column(df_raw, ["First Name", "Fname", "FirstName", "first_name", "first name"])
+    lname_col = _get_column(df_raw, ["Last Name", "Lname", "LastName", "last_name", "last name"])
+    email_col = _get_column(df_raw, ["Contact Email Address", "Email1", "Email", "Email Address", "email", "contact email address"])
     org_col = _get_column(df_raw, ["Organisation", "Organization", "Company", "organisation"])
-    state_col = _get_column(df_raw, ["State/Area", "State", "Area", "Region", "state_area"])
-    tech_col = _get_column(df_raw, ["Technical Tags", "Technical_Tags", "Tags", "technical_tags"])
+    
+    # State/grouping columns (different between US and UK)
+    state_col = _get_column(df_raw, ["US State", "uk grouping", "State/Area", "State", "Area", "Region", "state_area"])
+    
+    # Technical/Tags columns
+    tech_col = _get_column(df_raw, ["Tags", "Technical Tags", "Technical_Tags", "technical_tags"])
 
     # Use the matched columns (with fallbacks)
     if fname_col:
         df["Fname"] = df_raw[fname_col].fillna("").astype(str).str.strip()
     else:
+        print(f"WARNING: Could not find first name column in {list_type}")
         df["Fname"] = ""
         
     if lname_col:
         df["Lname"] = df_raw[lname_col].fillna("").astype(str).str.strip()
     else:
+        print(f"WARNING: Could not find last name column in {list_type}")
         df["Lname"] = ""
         
     df["Name"] = (df["Fname"] + " " + df["Lname"]).str.strip()
@@ -57,11 +65,14 @@ def process_sp_files(uploaded_file, upload_date_label: str, list_type: str) -> p
     if email_col:
         df["Email1"] = df_raw[email_col].fillna("").astype(str).str.strip()
     else:
-        raise KeyError(f"Could not find email column. Available columns: {list(df_raw.columns)}")
+        error_msg = f"Could not find email column in {list_type}. Available columns: {list(df_raw.columns)}"
+        print(f"ERROR: {error_msg}")
+        raise KeyError(error_msg)
     
     if org_col:
         df["Organisation"] = df_raw[org_col].fillna("").astype(str).str.strip()
     else:
+        print(f"WARNING: Could not find organisation column in {list_type}")
         df["Organisation"] = ""
 
     # Country based on the List Type
@@ -95,34 +106,51 @@ def process_sp_files(uploaded_file, upload_date_label: str, list_type: str) -> p
         
         tags.append(upload_date_label)
 
-        # Region
+        # Region - handle both US State and uk grouping columns
         if list_type in {"UK_DIRECT", "UK_REFERRERS"}:
-            state_value = row.get(state_col) if state_col else None
-            region = region_from_state_uk(state_value)
-            tags.append(region)
+            if state_col:
+                state_value = row.get(state_col)
+                # UK files have "uk grouping" column with values like "Scotland", "North East England"
+                if pd.notna(state_value):
+                    region = region_from_state_uk(str(state_value))
+                    tags.append(region)
+                else:
+                    tags.append("UK - Region Unknown")
+            else:
+                tags.append("UK - Region Unknown")
         else:
-            # Simplified region tagging for US lists
-            state_value = row.get(state_col) if state_col else None
-            state = str(state_value or "").strip()
-            if state:
-                tags.append(f"US-{state[:2].upper()}")
+            # US lists use "US State" column
+            if state_col:
+                state_value = row.get(state_col)
+                if pd.notna(state_value):
+                    state = str(state_value).strip()
+                    if state:
+                        tags.append(f"US-{state[:2].upper()}")
+                    else:
+                        tags.append("US - Region Unknown")
+                else:
+                    tags.append("US - Region Unknown")
             else:
                 tags.append("US - Region Unknown")
         
-        # Technical interests
-        tech_value = row.get(tech_col) if tech_col else None
-        interests = technical_tags_to_interest(tech_value)
-        tags.extend(interests)
+        # Technical interests from Tags column
+        if tech_col:
+            tech_value = row.get(tech_col)
+            if pd.notna(tech_value):
+                interests = technical_tags_to_interest(str(tech_value))
+                tags.extend(interests)
 
         # Deduplicate + join
         cleaned = []
         for t in tags:
-            if t and t not in cleaned:
+            if t and str(t) not in cleaned:
                 cleaned.append(str(t))
         
         tags_list.append('"' + '","'.join(cleaned) + '"')
 
     df["Tags"] = tags_list
+
+    print(f"Successfully processed {len(df)} contacts from {list_type}")
 
     # Return the columns
     return df[CONTACT_COLUMNS]
